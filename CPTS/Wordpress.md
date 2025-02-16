@@ -1,0 +1,1 @@
+Use wpscan if you find Wordpress!!!
