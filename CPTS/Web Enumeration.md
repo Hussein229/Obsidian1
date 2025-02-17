@@ -57,6 +57,7 @@ curl -IL https://www.inlanefreight.com
 _____________________________________________________________________________________
 
 #### whatweb
+Can be used to find out what technologies are in use
 ```shell
 whatweb 10.10.10.121
 
