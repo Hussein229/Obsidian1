@@ -36,7 +36,7 @@ sudo apt install seclists -y
 ```
 
 ```shell
-gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
+gobuster dns -d inlanefreight.com -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 ![](CPTS/img/105f989aa9917b1b41b5d07668aa88ef_MD5.jpeg)
 
