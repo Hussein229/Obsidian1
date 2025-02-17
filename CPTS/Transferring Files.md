@@ -44,4 +44,8 @@ Um das **File Format zu validieren**:
 file dateiname
 ```
 
-Um sicherzustellen, dass ein file, während des Transfers nicht verändert oder kaputt gegangen ist, kannst du die `md5 hash` zur validierung nehmen, hol dir bei beiden den Md5 hash und gucke ob sie glecih  
+Um sicherzustellen, dass ein file, während des Transfers nicht verändert oder kaputt gegangen ist, kannst du die `md5 hash` zur validierung nehmen, hol dir bei beiden den Md5 hash und gucke ob sie gleich sind:
+```shell-session
+md5sum dateiname
+```
+
