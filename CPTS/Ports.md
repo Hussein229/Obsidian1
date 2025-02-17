@@ -28,14 +28,16 @@ netcat ip port
 
 # Nmap
 
-| Flag              | Descripton                                                     |
-| ----------------- | -------------------------------------------------------------- |
-| `-sV`             | Version Scan - service protocol, application name, and version |
-| `-sC`             | Use Nmap Scripts                                               |
-| `-p-`             | Scan all ports                                                 |
-| `--script skript` | Kannst ein bestimmtes Skript angeben                           |
-| `-o`              | Betriebssystem Erkennung                                       |
-| `-A`              | Aggressive Scan                                                |
+| Flag              | Descripton                                                                                                                                                                                                                                                                                                                                           |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-sV`             | Version Scan - service protocol, application name, and version                                                                                                                                                                                                                                                                                       |
+| `-sC`             | Use Nmap Scripts                                                                                                                                                                                                                                                                                                                                     |
+| `-p-`             | Scan all ports                                                                                                                                                                                                                                                                                                                                       |
+| `--script skript` | Kannst ein bestimmtes Skript angeben                                                                                                                                                                                                                                                                                                                 |
+| `-o`              | Betriebssystem Erkennung                                                                                                                                                                                                                                                                                                                             |
+| `-A`              | Aggressive Scan                                                                                                                                                                                                                                                                                                                                      |
+| `-oA <basename>`  | speichert die Scan-Ergebnisse gleichzeitig in drei verschiedenen Formaten mit dem angegebenen **Basenamen**:<br><br>1. **`<basename>.nmap`** → Standard-Format (menschenlesbar)<br>2. **`<basename>.gnmap`** → Grep-freundliches Format (ähnlich `-oG`)<br>3. **`<basename>.xml`** → XML-Format (maschinenlesbar, nützlich für weitere Verarbeitung) |
+| `--open`          | Zeigt nur offene Ports an                                                                                                                                                                                                                                                                                                                            |
 
 Basic Scan - only scan the 1023 well known ports
 ```bash
