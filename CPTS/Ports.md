@@ -44,11 +44,34 @@ Basic Scan - only scan the 1023 well known ports
 nmap ip
 ```
 
-| State      | Descripton                                        |
-| ---------- | ------------------------------------------------- |
-| `open`     | Open                                              |
-| `filtered` | Firewall erlaubt nur Zugriff von spezifischen IPs |
-| ``         |                                                   |
+| State                         | Descripton                                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `open`                        | Open                                                                                                     |
+| `filtered`                    | Firewall erlaubt nur Zugriff von spezifischen IPs                                                        |
+| ``                            |                                                                                                          |
+
+| Flag                          | Description                                                                                              |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `--script=service-version`    | Erkennt detaillierte Dienstversionen (z. B. Apache 2.4.41 statt nur "HTTP").                             |
+| `--script=banner`             | Holt einfache **Banner-Informationen** von offenen Ports.                                                |
+| `--script=vulners`            | Prüft Dienste auf bekannte **CVE-Schwachstellen** mit der `vulners.com`-Datenbank.                       |
+| `--script=smb-vuln-ms17-010`  | Erkennt die **EternalBlue (MS17-010)** Schwachstelle in SMB-Servern.                                     |
+| `--script=http-title`         | Holt den **HTML-Titel** einer Webseite – nützlich zur Erkennung von Login-Panels oder Admin-Oberflächen. |
+| `--script=http-enum`          | Sammelt öffentliche **Verzeichnisse und Dateien** einer Webseite.                                        |
+| `--script=http-methods`       | Listet **HTTP-Methoden** (z. B. GET, POST, PUT, DELETE) auf, um unsichere Konfigurationen zu entdecken.  |
+| `--script=http-robots.txt`    | Analysiert `/robots.txt`, um verborgene Seiten oder sensible Verzeichnisse zu finden.                    |
+| `--script=smb-os-discovery`   | Zeigt das **Betriebssystem** eines SMB-Servers.                                                          |
+| `--script=smb-enum-shares`    | Listet **freigegebene SMB-Shares** auf, falls sie öffentlich zugänglich sind.                            |
+| `--script=dns-brute`          | Führt eine **DNS-Subdomain-Brute-Force** durch.                                                          |
+| `--script=dns-zone-transfer`  | Testet, ob eine unsichere **DNS-Zonenübertragung** möglich ist.                                          |
+| `--script=ip-geolocation-map` | Zeigt die **geografische Position** einer IP-Adresse.                                                    |
+| `--script=mysql-info`         | Holt **MySQL-Serverinformationen** (Version, Name, etc.).                                                |
+| `--script=mongodb-databases`  | Listet **öffentliche MongoDB-Datenbanken**, wenn der Server offen ist.                                   |
+| `--script=pgsql-brute`        | Führt eine **Brute-Force-Attacke** auf PostgreSQL durch.                                                 |
+| `--script=ftp-anon`           | Prüft, ob ein **FTP-Server anonymen Zugriff** erlaubt.                                                   |
+| `--script=ssh-brute`          | Führt eine **Brute-Force-Attacke** gegen SSH durch.                                                      |
+| `--script=http-brute`         | Führt eine **Brute-Force-Attacke** gegen Web-Login-Seiten durch.                                         |
+
 
 
 Banner Grabbing
