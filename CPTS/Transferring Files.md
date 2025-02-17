@@ -26,7 +26,22 @@ scp linenum.sh user@remotehost:/tmp/linenum.sh
 ___
 
 # Using BASE64
-Wenn du *nicht* Files transferieren kannst, weil zb eine Firewall da ist, kannst du deine Datei in BASE64 Encoden und dies dann senden, z.b. wollen wir eine **Datei** namens shell, `-w` sorgt dafür, dass keine Zeilenumbrüche beim decoden passie 
+Wenn du *nicht* Files transferieren kannst, weil zb eine Firewall da ist, kannst du deine Datei in BASE64 Encoden und dies dann senden, z.b. wollen wir eine **Datei** namens shell, `-w` sorgt dafür, dass keine Zeilenumbrüche beim decoden passiert, 
 ```shell-session
 base64 shell -w 0
 ```
+Du kannst nun einfach den output kopieren und beim Zielhost decoden
+```shell-session
+echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell
+```
+
+____
+
+# Validierung File Transfer
+
+Um das **File Format zu validieren**:
+```shell-session
+file dateiname
+```
+
+Um sicherzustellen, dass ein file, während des Transfers nicht verändert oder kaputt gegangen ist, kannst du die `md5 hash` zur validierung nehmen, hol dir bei beiden den Md5 hash und gucke ob sie glecih  
