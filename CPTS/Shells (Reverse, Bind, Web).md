@@ -72,6 +72,8 @@ Hussware0@htb[/htb]$ fg
 A `Web Shell` is typically a web script, i.e., `PHP` or `ASPX`, that accepts our command through HTTP request parameters such as `GET` or `POST` request parameters, executes our command, and prints its output back on the web page.
 
 #### Web Shell Skript:
+
+
 php
 ```php
 <?php system($_REQUEST["cmd"]); ?>
